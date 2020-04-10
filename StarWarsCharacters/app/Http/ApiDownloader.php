@@ -2,35 +2,55 @@
 
 
 namespace App\Http;
+use App\Http\Person;
+
+use http\Url;
 
 
 class ApiDownloader
 {
-    public $init;
-
-
-    public function  __construct()
-    {
-
-       $this ->init = curl_init();
-    }
-
+    public $curlHandle;
+    /**
+     * @param string $url
+     */
     public function setConnect(string $url)
     {
-        curl_setopt($this->init,CURLOPT_URL, $url);
-        curl_setopt($this->init,CURLOPT_SSL_VERIFYPEER,false);
-        curl_setopt($this->init,CURLOPT_RETURNTRANSFER,1);
+
+        $this->curlHandle = curl_init();
+        curl_setopt($this->curlHandle, CURLOPT_URL, $url);
+        curl_setopt($this->curlHandle, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($this->curlHandle, CURLOPT_RETURNTRANSFER, 1);
+    }
+
+    /**
+     * @param string $connect
+     * @return array|null
+     */
+    public function download(string $connect):?Person
+    {
+        try {
+            $this->setConnect($connect);
+            $receivedData = json_decode(curl_exec($this->curlHandle),true);
+            curl_close($this->curlHandle);
+
+            /** @var TYPE_NAME $receivedData */
+            $receivedData = new Person;
+            $receivedData->setData(array($receivedData));
+           return $receivedData;
+
+
+        }
+        catch(\Exception $error){
+            die($error->getMessage());
+
+        }
+
 
     }
-    public function download($connect)
-    {
-        $this->setConnect($connect);
-        return  curl_exec($this->init);
-    }
-    public function __destruct()
-    {
-        curl_close($this->init);
-    }
+
+
+
+
 
 
 }
