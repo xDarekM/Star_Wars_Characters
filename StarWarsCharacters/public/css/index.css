@@ -1,5 +1,5 @@
 body {
-    background: url('https://wallpaperplay.com/walls/full/a/0/5/124143.jpg') no-repeat center center fixed;
+    background: url('https://steelguru.com/uploads/news/pan-american-silver-coronavirus-covid-19_4152.png') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -10,15 +10,21 @@ body {
     width: 35%;
     margin-bottom: 2%;
 }
-#name{
+#date{
     background-color: #4772A7;
     text-align: center;
 }
 
-#eyesColor,#gender,#height,#mass,#year{
+#recovered,#deaths,#confirmed{
 
-    background-color: #A9A9A9;
+    background-color: aliceblue;
 }
 input{
     text-align: center;
 }
+div{
+    align-items: center;
+
+
+}
+

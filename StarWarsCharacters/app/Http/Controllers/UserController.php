@@ -11,7 +11,7 @@ class UserController
 
 
     public function store(Request $request){
-        $name = $request->input('name');
+        $name = $request-> input('name');
     }
 
 

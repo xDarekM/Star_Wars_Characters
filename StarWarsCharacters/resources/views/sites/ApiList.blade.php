@@ -7,21 +7,24 @@
 
 <div class="container">
 <ol>
-    <form action="DefaultController.php" method="get">
-    <input class="form-control" type="text" placeholder="Your Country e.x Poland" name="countrySet">
-        <input type="submit" placeholder="Check Your Country">
+    <form  method="get">
+    <input class="form-control" type="text" placeholder="Your Country e.x Poland, poland" name="countrySet">
+        <div><button type="submit" class="btn btn-primary mb-2" id="submitButton">Check Country</button></div>>
     </form>
-@foreach($star_wars as $element)
+@if(empty($star_wars))
+        <div class="alert alert-danger">Country not found</div>
+@else
+    @foreach($star_wars as $element)
         <ul class="list-group ">
-            <li class="list-group-item" id="name"> {{  $element['date'] }}</li>
-            <li class="list-group-item" id="height"> Confirmed :  {{  $element['confirmed']  }}</li>
-            <li class="list-group-item "id="mass"> Deaths  : {{  $element['deaths']  }}</li>
-            <li class="list-group-item" id="eyesColor"> Recovered  : {{  $element['recovered']  }}</li>
-
-
+            <li class="list-group-item" id="date"> {{  $element['date'] }}</li>
+            <li class="list-group-item" id="confirmed"> Confirmed :  {{  $element['confirmed']  }}</li>
+            <li class="list-group-item "id="deaths"> Deaths  : {{  $element['deaths']  }}</li>
+            <li class="list-group-item" id="recovered"> Recovered  : {{  $element['recovered']  }}</li>
         </ul>
         </li>
-@endforeach
+    @endforeach
+@endif
+
 </ol>
 </div>
 </body>

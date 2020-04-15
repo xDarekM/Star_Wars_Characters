@@ -7,20 +7,24 @@
 
 <div class="container">
 <ol>
-    <form action="ApiList.blade.php" method="get">
-    <input class="form-control" type="text" placeholder="Your Country e.x Poland" name="countrySet">
+    <form  method="get">
+    <input class="form-control" type="text" placeholder="Your Country e.x Poland, poland" name="countrySet">
+        <div><button type="submit" class="btn btn-primary mb-2" id="submitButton">Check Country</button></div>>
     </form>
-<?php $__currentLoopData = $star_wars; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $element): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+<?php if(empty($star_wars)): ?>
+        <div class="alert alert-danger">Country not found</div>
+<?php else: ?>
+    <?php $__currentLoopData = $star_wars; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $element): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <ul class="list-group ">
-            <li class="list-group-item" id="name"> <?php echo e($element['date']); ?></li>
-            <li class="list-group-item" id="height"> Confirmed :  <?php echo e($element['confirmed']); ?></li>
-            <li class="list-group-item "id="mass"> Deaths  : <?php echo e($element['deaths']); ?></li>
-            <li class="list-group-item" id="eyesColor"> Recovered  : <?php echo e($element['recovered']); ?></li>
-
-
+            <li class="list-group-item" id="date"> <?php echo e($element['date']); ?></li>
+            <li class="list-group-item" id="confirmed"> Confirmed :  <?php echo e($element['confirmed']); ?></li>
+            <li class="list-group-item "id="deaths"> Deaths  : <?php echo e($element['deaths']); ?></li>
+            <li class="list-group-item" id="recovered"> Recovered  : <?php echo e($element['recovered']); ?></li>
         </ul>
         </li>
-<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+<?php endif; ?>
+
 </ol>
 </div>
 </body>

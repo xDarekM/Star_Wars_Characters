@@ -33,13 +33,14 @@ class ApiDownloader
             $this->setConnect($connect);
             $receivedData = json_decode(curl_exec($this->curlHandle),true);
             curl_close($this->curlHandle);
-            $country = $_GET['$countrySet'];
-            if (array_key_exists($country,$receivedData)) {
+
+            if (array_key_exists($countrySet,$receivedData)) {
+
                 if (empty($receivedData)) {
                     return null;
                 }
                 $personArray = [];
-                foreach ($receivedData as $singleData) {
+                foreach ($receivedData["$countrySet"] as $singleData) {
                     $person = new PersonStats;
                     $person->setData($singleData);
 
@@ -54,8 +55,9 @@ class ApiDownloader
                 }
                 return $personArray;
            }
-
-
+            else{
+                        return [];
+                }
 
         }
         catch(\Exception $error){
