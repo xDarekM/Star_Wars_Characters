@@ -2,7 +2,7 @@
 
 
 namespace App\Http;
-use App\Http\Person;
+use App\Http\PersonStats;
 
 use http\Url;
 
@@ -26,17 +26,31 @@ class ApiDownloader
      * @param string $connect
      * @return array|null
      */
-    public function download(string $connect):?Person
+    public function downloadAndParse(string $connect):?array
     {
         try {
             $this->setConnect($connect);
             $receivedData = json_decode(curl_exec($this->curlHandle),true);
             curl_close($this->curlHandle);
+                if(empty($receivedData)){
+                    return null;
+                }
+                $personArray = [];
+            foreach ($receivedData as $singleData){
+                    $person = new PersonStats;
+                    $person ->setData($singleData);
 
-            /** @var TYPE_NAME $receivedData */
-            $receivedData = new Person;
-            $receivedData->setData(array($receivedData));
-           return $receivedData;
+                    $personArray[] = [
+                        'date'=> $person->date,
+                        'confirmed'=> $person->confirmed,
+                        'deaths'=> $person->deaths,
+                        'recovered'=> $person->recovered,
+
+
+
+                    ];
+            }
+                return  $personArray;
 
 
         }

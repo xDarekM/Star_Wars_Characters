@@ -9,12 +9,11 @@
 <ol>
 @foreach($star_wars as $element)
         <ul class="list-group ">
-            <li class="list-group-item" id="name"> {{  $element['name'] }}</li>
-            <li class="list-group-item" id="height"> Height :  {{  $element['height']  }}</li>
-            <li class="list-group-item "id="mass"> Mass  : {{  $element['mass']  }}</li>
-            <li class="list-group-item" id="eyesColor"> Eyes color  : {{  $element['eye_color']  }}</li>
-            <li class="list-group-item" id="year"> Birth Year  : {{  $element['birth_year']  }}</li>
-            <li class="list-group-item" id="gender"> Gender  : {{  $element['gender']  }}</li>
+            <li class="list-group-item" id="name"> {{  $element['date'] }}</li>
+            <li class="list-group-item" id="height"> Confirmed :  {{  $element['confirmed']  }}</li>
+            <li class="list-group-item "id="mass"> Deaths  : {{  $element['deaths']  }}</li>
+            <li class="list-group-item" id="eyesColor"> Recovered  : {{  $element['recovered']  }}</li>
+
 
         </ul>
         </li>

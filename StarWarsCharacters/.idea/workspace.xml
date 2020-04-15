@@ -2,14 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f20864e9-6f9d-44d1-ba63-863d440ee81e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Person.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/PersonStats.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/ApiDownloader.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/ApiDownloader.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DefaultController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/JsonParser.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/QEdq75MpFfL4Gr2J0HVKIq7bQ4Dh8t0nc7A3hKdm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/VcHpu2jIhFgN6UReYkMaUlxaxBjsmsaF4n7Z6oSC" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Person.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/sites/ApiList.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/sites/ApiList.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/A6iKBv8ewXiPBClaZ3VZh0AOQfs9uPxOwZ6wSVL5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/M950Hd6mJv0b8giQfiTVnG9yGjsR94hnixHk5n2u" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/NYIrWHSbkpMD7I3Kn4trZYe8yj61UmIYpGmmhOHs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/RrOxslHMby3G8LVlPHknYtQF9jzTNLnR537nOvfW" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/ToxCh5ijIauKlMGuIjtPBk368KsRZJBhznREcYLL" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/WKRVA7DuwzCOkiyPH9YX3mWIImW5QTItuU8wejzJ" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/YoSRZOHHUmiWSF0qjnTqA6W8DawYj0PSe69eCW8f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/pW4DhZ36IPjxbvhDEwkJO0yaTUB6wAdWdf9Jlgvl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/pjQoy5oMKlUmMz1Y5xaeyZ2CJsm5WzhWWh7F9vRi" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/views/2afec4c2f324412148fcae7a929d48b7f4755e53.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/2afec4c2f324412148fcae7a929d48b7f4755e53.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
     </list>
@@ -178,7 +185,8 @@
       <workItem from="1583750658461" duration="592000" />
       <workItem from="1586101631400" duration="9707000" />
       <workItem from="1586207936042" duration="2189000" />
-      <workItem from="1586517893068" duration="528000" />
+      <workItem from="1586517893068" duration="956000" />
+      <workItem from="1586894918551" duration="4088000" />
     </task>
     <servers />
   </component>

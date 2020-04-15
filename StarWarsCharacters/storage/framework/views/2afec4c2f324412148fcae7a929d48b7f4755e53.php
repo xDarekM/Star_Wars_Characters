@@ -9,12 +9,11 @@
 <ol>
 <?php $__currentLoopData = $star_wars; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $element): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <ul class="list-group ">
-            <li class="list-group-item" id="name"> <?php echo e($element['name']); ?></li>
-            <li class="list-group-item" id="height"> Height :  <?php echo e($element['height']); ?></li>
-            <li class="list-group-item "id="mass"> Mass  : <?php echo e($element['mass']); ?></li>
-            <li class="list-group-item" id="eyesColor"> Eyes color  : <?php echo e($element['eye_color']); ?></li>
-            <li class="list-group-item" id="year"> Birth Year  : <?php echo e($element['birth_year']); ?></li>
-            <li class="list-group-item" id="gender"> Gender  : <?php echo e($element['gender']); ?></li>
+            <li class="list-group-item" id="name"> <?php echo e($element['date']); ?></li>
+            <li class="list-group-item" id="height"> Confirmed :  <?php echo e($element['confirmed']); ?></li>
+            <li class="list-group-item "id="mass"> Deaths  : <?php echo e($element['deaths']); ?></li>
+            <li class="list-group-item" id="eyesColor"> Recovered  : <?php echo e($element['recovered']); ?></li>
+
 
         </ul>
         </li>
