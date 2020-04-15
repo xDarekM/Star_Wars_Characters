@@ -24,33 +24,37 @@ class ApiDownloader
 
     /**
      * @param string $connect
+     * @param string $countrySet
      * @return array|null
      */
-    public function downloadAndParse(string $connect):?array
+    public function downloadAndParse(string $connect, ?string $countrySet):?array
     {
         try {
             $this->setConnect($connect);
             $receivedData = json_decode(curl_exec($this->curlHandle),true);
             curl_close($this->curlHandle);
-                if(empty($receivedData)){
+            $country = $_GET['$countrySet'];
+            if (array_key_exists($country,$receivedData)) {
+                if (empty($receivedData)) {
                     return null;
                 }
                 $personArray = [];
-            foreach ($receivedData as $singleData){
+                foreach ($receivedData as $singleData) {
                     $person = new PersonStats;
-                    $person ->setData($singleData);
+                    $person->setData($singleData);
 
                     $personArray[] = [
-                        'date'=> $person->date,
-                        'confirmed'=> $person->confirmed,
-                        'deaths'=> $person->deaths,
-                        'recovered'=> $person->recovered,
-
+                        'date' => $person->date,
+                        'confirmed' => $person->confirmed,
+                        'deaths' => $person->deaths,
+                        'recovered' => $person->recovered,
 
 
                     ];
-            }
-                return  $personArray;
+                }
+                return $personArray;
+           }
+
 
 
         }

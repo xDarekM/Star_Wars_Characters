@@ -7,6 +7,9 @@
 
 <div class="container">
 <ol>
+    <form action="ApiList.blade.php" method="get">
+    <input class="form-control" type="text" placeholder="Your Country e.x Poland" name="countrySet">
+    </form>
 <?php $__currentLoopData = $star_wars; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $element): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <ul class="list-group ">
             <li class="list-group-item" id="name"> <?php echo e($element['date']); ?></li>

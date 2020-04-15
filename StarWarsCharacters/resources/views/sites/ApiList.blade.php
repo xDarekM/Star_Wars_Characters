@@ -7,6 +7,10 @@
 
 <div class="container">
 <ol>
+    <form action="DefaultController.php" method="get">
+    <input class="form-control" type="text" placeholder="Your Country e.x Poland" name="countrySet">
+        <input type="submit" placeholder="Check Your Country">
+    </form>
 @foreach($star_wars as $element)
         <ul class="list-group ">
             <li class="list-group-item" id="name"> {{  $element['date'] }}</li>
