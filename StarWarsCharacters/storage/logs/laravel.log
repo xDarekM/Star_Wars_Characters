@@ -6050,3 +6050,7 @@
 #44 /Applications/MAMP/htdocs/starWars/StarWarsCharacters/server.php(21): require_once('/Applications/M...')
 #45 {main}
 "} 
+[2020-04-15 14:20:45] local.ERROR: Can't use function return value in write context {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Can't use function return value in write context at /Applications/MAMP/htdocs/starWars/StarWarsCharacters/storage/framework/views/2afec4c2f324412148fcae7a929d48b7f4755e53.php:14)
+[stacktrace]
+#0 {main}
+"} 

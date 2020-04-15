@@ -11,7 +11,7 @@
     <input class="form-control" type="text" placeholder="Your Country e.x Poland, poland" name="countrySet">
         <div><button type="submit" class="btn btn-primary mb-2" id="submitButton">Check Country</button></div>>
     </form>
-@if(empty($star_wars))
+@if(empty($star_wars)  && gettype($star_wars="array"))
         <div class="alert alert-danger">Country not found</div>
 @else
     @foreach($star_wars as $element)

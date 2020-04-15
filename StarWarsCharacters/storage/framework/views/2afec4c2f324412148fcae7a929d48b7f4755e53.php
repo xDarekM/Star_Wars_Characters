@@ -11,7 +11,7 @@
     <input class="form-control" type="text" placeholder="Your Country e.x Poland, poland" name="countrySet">
         <div><button type="submit" class="btn btn-primary mb-2" id="submitButton">Check Country</button></div>>
     </form>
-<?php if(empty($star_wars)): ?>
+<?php if(empty($star_wars)  && gettype($star_wars="array")): ?>
         <div class="alert alert-danger">Country not found</div>
 <?php else: ?>
     <?php $__currentLoopData = $star_wars; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $element): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
